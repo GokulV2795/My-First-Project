@@ -1,6 +1,246 @@
-h1{
-    color: blueviolet;
-  }
-  h2{
-    color: chocolate;
-  }
+/* General Reset */
+body, h1, h2, h3, h4, h5, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-in-out; /* Page fade-in animation */
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    animation: slideInFromTop 1s ease-out; /* Slide down effect for header */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: textGlow 2s infinite alternate; /* Glow effect for the header text */
+}
+
+header p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out 0.5s; /* Delayed fade-in */
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 1.8rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    position: relative;
+    animation: growWidth 1.5s ease-in-out; /* Width grow animation */
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #4CAF50;
+    margin-top: 5px;
+    transition: width 0.5s;
+}
+
+section h2:hover::after {
+    width: 100%; /* Underline grows on hover */
+}
+
+/* Profile Summary */
+section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Work Experience */
+section div {
+    margin-bottom: 20px;
+    animation: fadeUp 1s ease-out;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #4CAF50;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #666;
+    margin-top: 10px;
+}
+
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+    animation: slideInFromLeft 0.5s ease-in-out; /* Slide effect for list items */
+}
+
+/* Skills Section */
+ol {
+    padding-left: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+ol li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+    animation: zoomIn 0.5s ease-in-out; /* Zoom effect for skills */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px 8px 0 0;
+    animation: fadeUp 1s ease-out;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #76d7c4;
+}
+
+/* Hover Effects */
+header h1:hover {
+    color: #76d7c4;
+    transform: scale(1.1); /* Slight zoom on hover */
+    transition: transform 0.3s ease;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes growWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 20px #76d7c4;
+    }
+    to {
+        text-shadow: 0 0 20px #76d7c4, 0 0 30px #4CAF50, 0 0 40px #4CAF50;
+    }
+}
+
+/* Add Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+}
