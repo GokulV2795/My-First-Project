@@ -20,7 +20,7 @@ body {
 /* Header Styling */
 header {
     text-align: center;
-    background-color: #4CAF50;
+    background-color: #8d0be3;
     color: #fff;
     padding: 20px;
     animation: slideInFromTop 1s ease-out; /* Slide down effect for header */
@@ -51,7 +51,7 @@ main {
 /* Section Titles */
 section h2 {
     font-size: 1.8rem;
-    color: #4CAF50;
+    color: #9606ef;
     margin-bottom: 10px;
     border-bottom: 2px solid #ddd;
     padding-bottom: 5px;
@@ -64,7 +64,7 @@ section h2::after {
     display: block;
     width: 0;
     height: 3px;
-    background: #4CAF50;
+    background: #890ee6;
     margin-top: 5px;
     transition: width 0.5s;
 }
@@ -96,7 +96,7 @@ h3 {
 h4 {
     font-size: 1.1rem;
     font-weight: 400;
-    color: #4CAF50;
+    color: #861cd1;
 }
 
 h5 {
@@ -143,19 +143,19 @@ footer {
 }
 
 footer a {
-    color: #4CAF50;
+    color: #6c14c9;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
 footer a:hover {
-    color: #76d7c4;
+    color: #d45b15;
 }
 
 /* Hover Effects */
 header h1:hover {
-    color: #76d7c4;
+    color: #de701c;
     transform: scale(1.1); /* Slight zoom on hover */
     transition: transform 0.3s ease;
 }
